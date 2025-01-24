@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #400000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.form-header h2 {
+    font-size: 18px;
+    color: #400000;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form select {
+    height: auto;
+    overflow: auto;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: #ff4500;
+}
+
+.form button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #e03c00;
+}
+
+.reminder_message {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Keyframes for the pop-up animation */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Keyframes for the fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Styling for error message */
+.message_error {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f44336; /* A modern red shade */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #d32f2f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed; /* Fix the message position */
+    top: 20px; /* Position it near the top of the viewport */
+    left: 50%; /* Horizontally center */
+    transform: translateX(-50%); /* Fine-tune centering */
+    z-index: 1000; /* Ensure it's on top */
+    animation: popUp 0.5s ease-out forwards, fadeOut 2s 3s forwards;
+    max-width: 400px; /* Set a maximum width */
+}
+
+/* Styling for success message */
+.message_success {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #4caf50; /* A modern green shade */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #388e3c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: popUp 0.5s ease-out forwards, fadeOut 2s 3s forwards;
+    max-width: 400px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    color: #007BFF; /* Blue color */
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 11px; /* Adds some space between the reminder message and the link */
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
