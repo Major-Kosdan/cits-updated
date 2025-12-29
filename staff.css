@@ -1,0 +1,456 @@
+/* General Reset */
+* {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+  }
+  
+  .logo img {
+    height: 80px;
+    margin-left: 30px;
+   
+  }
+  
+  .nav-text {
+    font-size: 14px;
+    line-height: 1.2;
+    color: black;
+    
+  }
+  
+  .nav-text strong {
+    font-size: 16px;
+    color: #a80000; /* Red text */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #d63447; /* Red on hover */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #d63447;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+     }
+    
+  .btn:hover {
+    background-color: #fff; /* Slightly lighter red on hover */
+    transform: scale(1.05); /* Add a subtle zoom-in effect on hover */
+    color: #d63447 !important;
+  }
+  
+  /* Staff Section Styling */
+  .staff-section {
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+  }
+  
+  .staff-header {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .staff-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  .header-text h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Staff Container */
+  .staff-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  /* Staff Row */
+  .staff-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Staff Card */
+  .staff-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Staff Images */
+  .staff-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+  /* Staff Name */
+  .staff-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Staff Role */
+  .staff-card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Animations (Optional) */
+  .staff-card {
+    opacity: 1;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .staff-card.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .staff-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .staff-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .staff-header img {
+      height: 200px;
+    }
+  }
+  
+  /* Overall section styling */
+.newsletter-section {
+    background-color: #0f4157; /* Dark background color */
+    padding: 50px 20px;  /* Padding around the section */
+    color: white; /* White text color */
+  }
+  
+  .newsletter-container {
+    display: flex;
+    justify-content: space-between;  /* Space between the text and form */
+    align-items: center;  /* Vertically center the text and form */
+    max-width: 1200px;  /* Limit the maximum width */
+    margin: 0 auto;  /* Center the container horizontally */
+  }
+  
+  /* Text styling */
+  .newsletter-text h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    max-width: 400px;  /* Limit the width of the text block */
+  }
+  
+  /* Form styling */
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align form elements to the right */
+  }
+  
+  /* Email input styling */
+  .newsletter-form input[type="email"] {
+    width: 300px;  /* Set input width */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f4f4f4; /* Light background for the input */
+  }
+  
+  /* Submit button styling */
+  .newsletter-form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .newsletter-form button img {
+    width: 24px;  /* Size of the paper plane icon */
+  }
+  
+  /* Signup text styling */
+  .signup-text {
+    color: #f4f4f4; /* Lighter text for the signup prompt */
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 85px;
+  }
+  
+  .signup-text img {
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .newsletter-container {
+      flex-direction: column;  /* Stack text and form vertically */
+      align-items: center;
+    }
+  
+    .newsletter-text h1 {
+      text-align: center;
+    }
+  
+    .newsletter-form input[type="email"] {
+      width: 100%;
+    }
+  }
+  
+  /* Email input styling */
+  .newsletter-form input[type="email"] {
+    width: 300px;  /* Set input width */
+    padding: 10px;
+    font-size: 16px;
+    border: none;  /* Remove the default borders */
+    border-bottom: 1px solid white;  /* Add only a bottom border */
+    background-color: transparent;  /* Transparent background */
+    color: white;  /* White text color */
+    outline: none;  /* Remove the blue outline when focused */
+    margin-bottom: 10px;
+  }
+  
+  /* Placeholder text color */
+  .newsletter-form input[type="email"]::placeholder {
+    color: #f4f4f4;  /* Light color for the placeholder text */
+  }
+  
+  
+  /* Style the submit icon */
+  .newsletter-form button i {
+    font-size: 24px;  /* Adjust the icon size */
+    color: white;     /* Set the icon color */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .newsletter-form button:hover i {
+    color: #ff9800;  /* Change icon color on hover */
+  }
+  
+  
+  /* Footer Section Styling */
+  .footer-section {
+    background-color: #000; /* Black background like in the image */
+    color: white;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between the columns */
+    align-items: flex-start; /* Aligns items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Adds space between the columns */
+  }
+  
+  /* Left Column (ABS-CITS Info) */
+  .footer-left {
+    flex: 1;
+  }
+  
+  .footer-left h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+  }
+  
+  /* Middle Column (Site Map) */
+  .footer-middle {
+    flex: 1;
+  }
+  
+  .footer-middle h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-middle ul {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 0;
+  }
+  
+  .footer-middle li a{
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline from links */
+    color: #fff
+  }
+  
+  .footer-middle li:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  
+  /* Right Column (Map) */
+  .footer-right {
+    flex: 1;
+    max-width: 350px; /* Adjust map image size */
+    margin-right: 100px;
+  }
+  
+  .footer-right img {
+    width: 100%;
+    height: auto;
+  
+  }
+  
+  /* Email icon styling */
+  .footer-left i {
+    margin-right: 8px;
+  }
+  
+  
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    background-color: #000; /* Black background */
+    padding: 15px 0;
+  }
+  
+  .footer-bottom-container {
+    display: flex;
+    justify-content: space-between; /* Align items to opposite sides */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the footer content */
+    color: #f4f4f4; /* White text for contrast */
+    padding: 0 20px; /* Add some padding to the container */
+  }
+  
+  .copyright-text {
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .social-link i {
+    font-size: 20px;
+    color: #f4f4f4; /* White color for icons */
+    transition: color 0.3s;
+    background-color: #e63946;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  
+  .social-link i:hover {
+    color: #e63946; /* Hover effect for icons (red) */
+    background-color: #f4f4f4;
+  }
+
+  /* Back to Top Section */
+.back-to-top {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-to-top-link {
+  text-decoration: none;
+  color: #d32f2f; /* Red color matching the theme */
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.back-to-top-link i {
+  font-size: 1.2rem;
+  margin-right: 5px; /* Spacing between icon and text */
+}
+
+.back-to-top-link:hover {
+  color: #b71c1c; /* Darker red on hover */
+}
